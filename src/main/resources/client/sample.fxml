@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/1.8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem onAction="#btnExitAction" text="Выйти из программы"/>
+        </Menu>
+    </MenuBar>
+    <HBox spacing="5">
+        <VBox>
+            <HBox spacing="2">
+                <ComboBox/>
+                <TextField HBox.hgrow="ALWAYS" editable="false"/>
+                <Button text="Вверх"/>
+            </HBox>
+            <TableView fx:id="clientView" VBox.vgrow="ALWAYS"/>
+            <HBox spacing="5">
+                <Button HBox.hgrow="ALWAYS"  text="Копировать"/>
+                <Button text="Вставить"/>
+                <Button text="Удалить"/>
+            </HBox>
+        </VBox>
+        <VBox alignment="CENTER_LEFT">
+            <Button onAction="#toServer" mnemonicParsing="false" prefHeight="30" prefWidth="73.0" text="&gt;&gt;" />
+            <Button onAction="#fromServer" mnemonicParsing="false" prefHeight="30" prefWidth="73.0" text="&lt;&lt;" />
+        </VBox>
+        <VBox>
+            <HBox spacing="2">
+                <ComboBox/>
+                <TextField HBox.hgrow="ALWAYS" editable="false"/>
+                <Button text="Вверх"/>
+            </HBox>
+            <TableView fx:id="serverView" VBox.vgrow="ALWAYS"/>
+            <HBox spacing="5">
+                <Button HBox.hgrow="ALWAYS"  text="Копировать"/>
+                <Button text="Вставить"/>
+                <Button text="Удалить"/>
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>
